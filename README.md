@@ -29,3 +29,11 @@ This repo contains mainly two components :
 - a blocklist-manager made in python for adguard-home to process and manage blocklists auotomatically (as there are allot of duplicates around copying each-other)
 
 Visit blocklist-manager for the python app, and adguard-dnscrypt for the container (they have their own readme) for more details
+
+## Download
+
+Clone the repository:
+   ```bash
+   git clone https://github.com/ArditD/adguard-home-dnscrypt.git
+   cd adguard-blocklist-manager
+   ```

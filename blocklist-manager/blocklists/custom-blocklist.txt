@@ -1,4 +1,0 @@
-||gs-dre.game.dbankcloud.com^
-||terms-dre.platform.dbankcloud.com^
-||store-dre.hispace.dbankcloud.com^
-||sdkserver-dre.op.dbankcloud.com^
