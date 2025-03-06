@@ -4,7 +4,7 @@ With Mozilla's controversial recent behaviors :
 - The famous privacy controversy, and Mozilla trying to mend up :  https://techcrunch.com/2025/03/03/mozilla-rewrites-firefoxs-terms-of-use-after-user-backlash/ 
 - Well, As for Google : https://www.theverge.com/news/622953/google-chrome-extensions-ublock-origin-disabled-manifest-v3 
 
-Long story short, people are very hungry for data due to the AI hype, and they don't care how they collect them.
+Long story short, companies seem hungry for data due to the AI rush, and they don't seem to care on how and what they collect.
 
 An extract from : https://www.scss.tcd.ie/Doug.Leith/pubs/cookies_identifiers_and_other_data.pdf 
 
