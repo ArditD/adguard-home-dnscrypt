@@ -1,0 +1,4 @@
+__pycache__
+merged-blocklist-*.txt
+config.json
+custom-blocklist.txt
