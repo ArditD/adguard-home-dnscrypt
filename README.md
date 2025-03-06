@@ -1,4 +1,4 @@
-# AdGuard Blocklist Manager
+# AdGuard-Dnscrypt Docker Container plus AdGuard Blocklist Manager as a bonus
 
 ## The Current Thirst for Data
 
