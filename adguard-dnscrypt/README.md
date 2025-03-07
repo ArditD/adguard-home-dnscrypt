@@ -1,8 +1,7 @@
-## What is this?
-I like adguard-home, it provides an easy way through it's interface to control the DNS traffic, by enabling us to block domains that we don't like for our entire home network.
-**However** , I didn't like how it didn't how by default it doesn't encrypt the DNS traffic (which adds security and privacy).
-Yes, it provides DoH , etc out-of-the box but they are not particularly private, so I wanted to have it interact with dnscrypt-proxy.
-There's some documentation around but I didn't have much access inside the default adguard-home container, I couldn't tweak it and I didn't know what was going on inside,and as with any open source it's good to build your own, here's the : 
+# Arch Docker Container with DNSCrypt and AdGuard Home
+
+This document provides an overview of a Docker-based setup combining **DNSCrypt-Proxy** and **AdGuard Home** for enhanced DNS privacy and network-wide ad-blocking. Both services are managed via `supervisord`.
+Adguard-home is meant to be used for content filtering, while dnscrypt-proxy as an upstream proxy to fully encrypt and secure the internet DNS traffic
 
 ## Feature List
 - Arch Linux container
@@ -15,19 +14,32 @@ There's some documentation around but I didn't have much access inside the defau
 
 
 ## Prerequisites
-1) Docker (up and running) , you can modify the Dockerfile to buildx in case of more recent dockers
-2) Check the device you are going to install the container for firewall rules in outgoing or incomming that may block dnscrypt, or your local DNS traffic
-3) Change the /var/local/workdir & confdir on accordingly (or edit the docker run to match yours)
-4) Make sure the ports you choose don't conflict with what's already running on your host (netstat -ptluna)
-5) If you have a dnsmasq running I advice to configure port=0 on dnsmasq.conf and restart to disable it's listening on port 53
+- Docker (up and running) , you can modify the Dockerfile to buildx in case of more recent dockers
+- Check the device you are going to install the container for firewall rules in outgoing or incomming that may block dnscrypt, or your local DNS traffic
+- Change the /var/local/workdir & confdir on accordingly (or edit the docker run to match yours)
+- Make sure the ports you choose don't conflict with what's already running on your host (netstat -ptluna)
+- If you have a dnsmasq running I advice to configure port=0 on dnsmasq.conf and restart to disable it's listening on port 53
 
 
-## How-To
-1) Build the container (after downloading)
-2) Start the container
-3) Visit http://your-device-IP:3000
-4) Do the basic configuration, specify the port to 81 and set your user/password
-5) Visit http://your-device-IP:81 login and on settings > DNS Settings set 127.0.0.1:5353 **twice**
+## DNSCrypt-Proxy Configuration 
+- Listener on 0.0.0.0:5353
+- Privacy features
+```
+dnscrypt_ephemeral_keys = true   # Unique key per query
+require_nolog = true             # No-log policy enforcement
+require_nofilter = true          # No-filtering policy
+```
+- Performance
+```
+lb_strategy = "p3"               # Load balance across fastest 3 servers
+cache = true                     # Enable response caching
+cache_size = 4096                # Cache entries
+```
+- Daemon logging
+The log_file = '/var/log/dnscrypt-proxy/dnscrypt-proxy.log' is **NOT** used for DNS queries, just for the daemon, 
+if you want to see the DNS traffic then uncomment ``# file = '/var/log/dnscrypt-proxy/query.log'``
+
+
 
 ### Build
 ```
@@ -66,6 +78,11 @@ supervisorctl status adguardhome
 adguardhome                      RUNNING   pid 37, uptime 0:00:48
 ```
 
-
-
-
+## How-To adguard-home
+- Build the container (after downloading)
+- Start the container
+- Visit http://your-device-IP:3000 - this will be available for first configurations
+- Do the basic configuration, specify the port to 81 (or adapt accordingly) and set your user/password
+- Visit http://your-device-IP:81 login and on settings > DNS Settings set 127.0.0.1:5353 **twice** (didn't spend time debugging but adguard-home has some weird behaviors)
+- Save and configure as you want your adguard-home
+- I wouldn't recommend enabling any encryption option since dnscrypt-proxy will act as upstream
