@@ -80,6 +80,37 @@ options:
 
 ```
 
+### Live example
+```bash
+ ╰────────✍️ python main.py --force
+2025-03-07 00:29:05 - INFO - Securely downloaded: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.lgwebos.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.xiaomi.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://v.firebog.net/hosts/Easyprivacy.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.tiktok.extended.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.amazon.txt
+2025-03-07 00:29:06 - INFO - Securely downloaded: https://adguardteam.github.io/HostlistsRegistry/assets/filter_44.txt
+2025-03-07 00:29:11 - INFO - Securely downloaded: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/popupads.txt
+2025-03-07 00:29:11 - INFO - Securely downloaded: https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt
+2025-03-07 00:29:11 - INFO - Securely downloaded: https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt
+2025-03-07 00:29:11 - INFO - Securely downloaded: https://raw.githubusercontent.com/sjhgvr/oisd/refs/heads/main/oisd_nsfw.txt
+2025-03-07 00:29:11 - INFO - Securely downloaded: https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt
+2025-03-07 00:29:12 - INFO - Securely downloaded: https://github.com/fabriziosalmi/blacklists/releases/download/latest/blacklist.txt
+2025-03-07 00:29:12 - INFO - Loaded 1 domains from whitelist: whitelist.txt
+2025-03-07 00:29:38 - INFO - Securely processed 3371262 domains
+2025-03-07 00:29:38 - INFO - Found 1655681 duplicate entries while processing
+2025-03-07 00:29:38 - INFO - Wrote 699045 domains to merged-blocklist-1.txt
+2025-03-07 00:29:38 - INFO - Wrote 699045 domains to merged-blocklist-2.txt
+2025-03-07 00:29:38 - INFO - Wrote 699045 domains to merged-blocklist-3.txt
+2025-03-07 00:29:38 - INFO - Wrote 699045 domains to merged-blocklist-4.txt
+2025-03-07 00:29:38 - INFO - Wrote 575082 domains to merged-blocklist-5.txt
+2025-03-07 00:29:38 - INFO - Successfully split 3371262 domains into 5 files
+2025-03-07 00:29:38 - INFO - Blocklist processing and splitting completed securely
+```
+
 This will download and process blocklists according to the default configuration file.
 
 ### Examples
