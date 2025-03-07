@@ -1,6 +1,6 @@
 # AdGuard Blocklist Manager
 
-A secure and efficient Python tool for downloading, processing, and merging AdGuard blocklists with advanced security features.
+A secure and efficient Python tool for downloading, processing, and merging AdGuard blocklists with good security features.
 
 ## Features
 
