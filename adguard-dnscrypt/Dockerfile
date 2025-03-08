@@ -11,7 +11,7 @@ RUN pacman -Syu --noconfirm && \
 
 # Some provisioning & minor tweaks
 RUN rm /etc/adguardhome.yaml && mkdir /var/log/dnscrypt-proxy/ && \
-    mkdir -p /opt/adguardhome/work
+    mkdir -p /opt/adguardhome/work && mkdir /var/cache/dnscrypt-proxy/
 
 # Copy configuration files
 COPY dnscrypt-proxy.toml /etc/dnscrypt-proxy/dnscrypt-proxy.toml
