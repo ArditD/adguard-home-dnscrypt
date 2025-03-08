@@ -51,6 +51,8 @@ docker run -d --name adguard-dnscrypt \
     --restart unless-stopped \
     -v /var/local/workdir:/opt/adguardhome/work \
     -v /var/local/confdir:/opt/adguardhome/conf \
+    -v /etc/timezone:/etc/timezone:ro \
+    -v /etc/localtime:/etc/localtime:ro \
     -p 81:81/tcp \
     -p 3000:3000/tcp \
     -p 53:53/tcp \

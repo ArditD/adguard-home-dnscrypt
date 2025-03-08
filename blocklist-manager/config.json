@@ -2,7 +2,16 @@
     "urls": [
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt",
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt",
+<<<<<<< HEAD
         "https://adguardteam.github.io/HostlistsRegistry/assets/filter_44.txt",
+=======
+        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt",
+        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt",
+        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_60.txt",
+        "https://adguardteam.github.io/HostlistsRegistry/assets/filter_61.txt",
+        "https://filters.adtidy.org/android/filters/1_optimized.txt",
+        "https://filters.adtidy.org/android/filters/2_optimized.txt",
+>>>>>>> b01137bf7e640172284ef0b52a3988be8f453dcb
         "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt",
         "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.xiaomi.txt",
         "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/domains/native.lgwebos.txt",
